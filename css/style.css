@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #141414;
+    color: white;
+}
+
+img{
+    width: 150px;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+h2{
+    color: #ccc;
+    margin: 10px 0px;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Grid-Conteiner{
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "item1 item2"
+    "item3 item3";
+    margin: 50px auto;
+    width: 52%;
+}
+
+#title{
+    grid-area: title;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+}
+
+#title h1{
+    margin-bottom: 5px;
+    font-size: 3em;
+}
+
+#item1{
+    grid-area: item1;
+}
+
+#item1 #img-icon{
+    position: relative;
+    margin-right: 10px;
+}
+
+#item1 i{
+    position: absolute;
+    top: 120px;
+    left: 5px;
+    background-color: black;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#item1 .icon{
+    color: white;
+}
+
+#item2{
+    grid-area: item2;
+}
+
+#item2 .input-inf{
+    width: 100%;
+    padding: 10px;
+    font-size: 19px;
+    border: none;
+    outline: none;
+    background: rgba(48, 48, 48, 0.863);
+    color: white;
+}
+
+#item2 .idioma{
+    margin: 10px 0px;
+    font-size: 20px;
+}
+
+#item2 select{
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+#item2 p{
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+#item2 p > a{
+    color: white;
+    font-weight: 700;
+}
+
+#item2 section:nth-child(2){
+    margin-top: 20px;
+    border-top: 1px solid #333;
+}
+
+section p:nth-child(2){
+    width: 50%;
+    padding: 10px;
+    background-color: #333;
+    font-family:sans-serif;
+    color: white;
+}
+
+section p:nth-child(3){
+    font-size: 15px;
+}
+
+section button{
+    margin: 10px 0px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+}
+
+section button:hover{
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+#item2 label{
+    width: 150%;
+    display: block;
+}
+
+#item3{
+    grid-area: item3;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+}
+
+#item3 section{
+  margin-top: 40px;
+}
+
+#item3 section a{
+    margin-right: 20px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    font-family: sans-serif;
+}
+
+#item3 section a:nth-child(1){
+    background-color: white;
+    font-weight: 600;
+    color: black;
+}
+
+#item3 section a:nth-child(1):hover{
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}
+
+#item3 section a:nth-child(2){
+    font-weight: 600;
+    border: 1px solid #333;
+    color:#333;
+}
+
+#item3 section a:nth-child(2):hover{
+    border: 1px solid white;
+    color:white;
+}
+
+@media screen and (max-width:1024px) {
+    #item2 p {
+        width: 100%;
+    }
+
+    section button {
+        margin: 10px 0px;
+        padding: 5px 20px;
+        background-color: transparent;
+        border: 1px solid #333;
+        color: #333;
+    }
+}
+
+@media screen and (max-width:425px) {
+    img {
+        width: 100px;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    #Grid-Conteiner{
+        margin: 50px;
+        width: 80%;
+    }
+
+    #item1 i{
+        position: absolute;
+        top: 70px;
+        left: 5px;
+        padding: 5px;
+    }
+
+    #item2 .input-inf {
+        width: 100%;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    #item2 p {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    #item2 label{
+        width: 90%;
+        display: block;
+        font-size: 1em;
+    }
+
+    #item3 section a{
+        margin-right: 20px;
+        padding: 5px 5px;
+    }
+}
+
+@media screen and (max-width:375px){
+    img {
+        width: 90px;
+    }
+
+    #item1 i{
+        position: absolute;
+        top: 65px;
+        left: 5px;
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    #item2 select{
+        padding: 3px;
+        background-color: black;
+        color: white;
+    }
+}
+
+@media screen and (max-width:320px){
+
+    img {
+        width: 70px;
+    }
+
+    #title h1{
+        font-size: 2em;
+    }
+
+    #item1 i{
+        position: absolute;
+        top: 45px;
+        left: 5px;
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    #item2 label{
+        width: 95%;
+        display: block;
+        font-size: 0.9em;
+    }
+
+}
